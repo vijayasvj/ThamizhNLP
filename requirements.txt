@@ -1,0 +1,6 @@
+open-tamil
+translate
+langdetect
+open-cv
+datetime
+__future__
