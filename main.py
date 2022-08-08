@@ -364,7 +364,7 @@ with body2:
     with col2:
         st.markdown("### Sentiment analysis")
         st.write("Finding whether the comment is OFFENSIVE or NOT-OFFENSIVE")
-        word_senti = st.text_input("Enter a word", key ='sentiment')
+        word_senti = st.text_input("Enter a Tanglish comment", key ='sentiment')
         sf = ""
         if word_senti:
             sf = senti(word_senti)
