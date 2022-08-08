@@ -11,7 +11,7 @@ from tamilstemmer import TamilStemmer
 from tamil.utf8 import splitMeiUyir, joinMeiUyir, get_letters, uyir_letters, mei_letters
 from langdetect import detect
 from datetime import datetime
-
+from tamil.datetime import datetime
 
 all_rules = {
     u'அ': {
