@@ -307,6 +307,37 @@ body4 = st.container()
 
 with body1: 
     col1, col2, col3 = st.columns(3)
+    with col1:
+        st.markdown("### Word stemmer")
+        st.write("To stem a word (i.e to find the root of the word)")
+        word_stem = st.text_input("Enter a word", key ='stem')
+        df = ""
+        if word_stem:
+            df = stemmer(word_stem)
+        st.markdown(f"<p style='text-align: center; color: black;'>{df}</h1>", unsafe_allow_html=True)
+
+    with col2:
+        st.markdown("### Sentiment analysis")
+        st.write("Finding whether the comment is OFFENSIVE or NOT-OFFENSIVE")
+        word_senti = st.text_input("Enter a Tanglish comment", key ='sentiment')
+        sf = ""
+        if word_senti:
+            sf = senti(word_senti)
+        st.markdown(f"<p style='text-align: center; color: black;'>{sf}</h1>", unsafe_allow_html=True)
+
+    with col3:
+        st.markdown("### Tamil to English translator")
+        st.write("Enter a tamil word to translate it to english")
+        word_translate = st.text_input("Enter a word", key ='translate')
+        df = ""
+        if word_translate:
+            df = translate(word_translate)
+        st.markdown(f"<p style='text-align: center; color: black;'>{df}</h1>", unsafe_allow_html=True)
+
+    st.write("---")
+
+with body2:
+    col1, col2, col3 = st.columns(3)
     with col1: 
         st.markdown("### Spell checker")
         st.write("Type in a word to check if the spelling is correct")
@@ -346,38 +377,6 @@ with body1:
             t = time_split.split(":")   #idhuvum list dhan
             tamildate = date_n_time(d[0],d[1],d[2],t[0],t[1])
             st.markdown(f"<p style='text-align: center; color: black;'>{tamildate}</h1>", unsafe_allow_html=True)
-
-    st.write("---")
-
-with body2:
-    col1, col2, col3 = st.columns(3)
-
-    with col1:
-        st.markdown("### Word stemmer")
-        st.write("To stem a word (i.e to find the root of the word)")
-        word_stem = st.text_input("Enter a word", key ='stem')
-        df = ""
-        if word_stem:
-            df = stemmer(word_stem)
-        st.markdown(f"<p style='text-align: center; color: black;'>{df}</h1>", unsafe_allow_html=True)
-
-    with col2:
-        st.markdown("### Sentiment analysis")
-        st.write("Finding whether the comment is OFFENSIVE or NOT-OFFENSIVE")
-        word_senti = st.text_input("Enter a Tanglish comment", key ='sentiment')
-        sf = ""
-        if word_senti:
-            sf = senti(word_senti)
-        st.markdown(f"<p style='text-align: center; color: black;'>{sf}</h1>", unsafe_allow_html=True)
-
-    with col3:
-        st.markdown("### Tamil to English translator")
-        st.write("Enter a tamil word to translate it to english")
-        word_translate = st.text_input("Enter a word", key ='translate')
-        df = ""
-        if word_translate:
-            df = translate(word_translate)
-        st.markdown(f"<p style='text-align: center; color: black;'>{df}</h1>", unsafe_allow_html=True)
 
     st.write("---")
 
