@@ -1,6 +1,4 @@
 from __future__ import print_function
-from datetime import datetime
-from tamil.date import datetime
 import pickle
 from numpy import empty
 import streamlit as st
@@ -12,6 +10,7 @@ from translate import Translator
 from tamilstemmer import TamilStemmer
 from tamil.utf8 import splitMeiUyir, joinMeiUyir, get_letters, uyir_letters, mei_letters
 from langdetect import detect
+from datetime import datetime
 
 
 all_rules = {
