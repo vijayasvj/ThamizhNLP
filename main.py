@@ -148,7 +148,7 @@ def stemmer(token):
     return token
 
 def translate(text):
-    translator= Translator(from_lang="ta",to_lang="spanish")
+    translator= Translator(from_lang="ta",to_lang="english")
     translation = translator.translate(text)
     return translation
 
