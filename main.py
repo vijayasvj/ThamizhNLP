@@ -295,7 +295,7 @@ def senti(text):
 
 
 
-#st.set_page_config(layout = "wide")
+st.set_page_config(layout = "wide")
 
 st.title("தமிழ் NLP")
 st.write("##")
